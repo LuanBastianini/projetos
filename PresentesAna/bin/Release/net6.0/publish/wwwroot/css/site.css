@@ -1,0 +1,64 @@
+body {
+  font-family: 'Handlee', sans-serif;
+}
+
+img[name="cardimag"]{
+    height: 150px;
+}
+
+.indisponivel{
+  box-shadow: 0 4px 8px 0 rgb(255, 0, 0), 0 6px 10px 0 rgb(255, 0, 0 / 22%);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.disponivel{
+  box-shadow: 0 4px 8px 0 rgb(158 255 174), 0 6px 10px 0 rgb(158 255 174 / 22%);
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px)
+{
+  img[name="cardimag"]{
+    height: 100%;
+  }
+}
+
+  /* label color */
+  .input-field label {
+    color: #000;
+    font-size: 25px;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #000;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+  ::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 0.7; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: rgb(0, 0, 0);
+    opacity: 0.7; 
+  }

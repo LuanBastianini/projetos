@@ -1,0 +1,7 @@
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\PresentesAna.exe
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\appsettings.Development.json
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\appsettings.json
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\PresentesAna.dll
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\PresentesAna.deps.json
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\PresentesAna.runtimeconfig.json
+C:\Projetos\CasaDaAna\PresentesAna\bin\Release\net6.0\publish\PresentesAna.pdb

@@ -1,0 +1,127 @@
+﻿
+<div style="background-color: #EFBDBB; padding: 250px 0 10px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Primeiro-Segundo" id="first_name" type="text">
+                <label for="first_name">Nome:</label>
+            </div>
+            <a class="waves-effect red waves-light btn-large" onclick="listar()">Listar</a>
+        </div>
+    </div>
+    <div id="divPresente" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <h4 class="header col s12 light" style="margin: 20px 0 0 0;">Lista de Presentes</h4>
+                <span class="header col s12 light" style="margin: 0;">Abaixo estão os produtos da lista de presentes para você escolher</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <div class="row" id="listaPresentes"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="~/img/desktop02.png" style="width: 100%;" />
+
+<script>
+    var presentes = [
+        'Panela de pressão',
+        'Pano de prato',
+        'Peneiras',
+        'Ralador',
+        'Tabua de corte',
+        'Garrafa termica',
+        'Xicaras',
+        'Conjunto de sobremesa', 
+        'Jogo de copo',
+        'Escorredor de louça',
+        'Escorredor de arroz',
+        'Escorredor de massa',
+        'Assadeira',
+        'Frigideira',
+        'Jogo de pratos',
+        'Leiteira',
+        'Lixeira',
+        'Tapetes',
+        'Cesto para roupa',
+        'Toalha de banho e rosto',
+        'Porta sabonete/escovas',
+        'Baldes',
+        'Pregador de roupa',
+        'Varal de chão',
+        'Boleira',
+        'Açucareiro',
+        'Bacias',
+        'Porta temperos',
+        'Escumadeira',
+        'Pegador de massa e salada',
+        'Saladeira' ,
+        'Talheres',
+        'Forma de gelo',
+        'Tabua de passar',
+        'Ferro de passar',
+        'Pirex',
+        'Abridor de lata',
+        'Potes',
+        'Espatulas',
+        'Jogo de cama',
+        'Liquidificador',
+        'Mixer',
+    ]
+
+    function listar(){
+        if(!$('#first_name').val()){
+            M.toast({html: 'Preciso saber seu nome ^.^'})
+            return;
+        }
+        $.get('@Url.Action("ListaPresentes","Home")').done(function( data ) {
+            for(let i = 1; i <= 42; i++){
+                var index = JSON.parse(data).findIndex(function (a) {
+                    return a.ID === i
+                })
+                $("#listaPresentes").append(
+                    "<div class='col s12 m2' onclick='escolher(this)'>" +
+                        "<div class='card " + (index < 0 ? "disponivel" : "indisponivel") + " ' data-numImg='"+(i)+"'>" +
+                            "<span class='card-title' style='color: black; padding-left: 10px; font-size: 10px;'>"+presentes[i-1]+"</span>" +
+                            "<div class='card-image'>" +
+                                "<img name='cardimag' src='presentes/"+(i)+".jpeg'>" +
+                            "</div>" +
+                            "<span name='done' class='card-title' style='color: black; padding-left: 10px; font-size: 10px;'></span>" +
+                        "</div>" +
+                    "</div>"
+                );
+            }
+        });
+
+        $('#divPresente').slideDown();
+    }
+
+    function escolher(item){
+        if($(item).find('[data-numImg]').hasClass('disponivel')){
+            $.get('@Url.Action("Escolher","Home")', {
+                id: $(item).find('[data-numimg]').data('numimg'),
+                nomeConvidado: $('#first_name').val()
+            }).done(function(){
+                M.toast({html: 'Ela vai Adorar.^^'})
+                $(item).find('span[name="done"]').text("Indisponivel");
+                $(item).find('[data-numImg]').removeClass('disponivel').addClass('indisponivel');
+            }).fail(function() {
+                console.log("Falha Para Selecionar");
+            });
+        }
+        else{
+             $.get('@Url.Action("Remover","Home")', {
+                id: $(item).find('[data-numimg]').data('numimg'),
+                nomeConvidado: $('#first_name').val()
+            }).done(function(a){
+                M.toast({html: a})
+                $(item).find('span[name="done"]').text("");
+                $(item).find('[data-numImg]').removeClass('indisponivel').addClass('disponivel');
+            }).fail(function(xhr) {
+                M.toast({html: xhr.responseText})
+            });
+        }
+    }
+</script>
