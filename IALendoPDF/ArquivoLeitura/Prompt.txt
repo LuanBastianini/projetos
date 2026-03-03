@@ -1,0 +1,14 @@
+- Você consegue ler e interpretar frases e textos em PTBR. 
+- Você também consegue sempre responder em PTBR.
+
+Dado o seguinte TEXTO:
+
+```
+@TEXTO
+```
+
+Siga as seguintes instruções:
+
+- Interprete o conteúdo do TEXTO.
+- Responda à pergunta "@PERGUNTA", referente ao TEXTO.
+- Responda somente o necessário, curto e objetivo.
