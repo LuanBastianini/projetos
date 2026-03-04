@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\IALendoPDF\\IALendoPDF.csproj": {}
+    "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\IALendoPDF\\IALendoPDF.csproj": {
+    "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\IALendoPDF\\IALendoPDF.csproj",
+        "projectUniqueName": "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj",
         "projectName": "IALendoPDF",
-        "projectPath": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\IALendoPDF\\IALendoPDF.csproj",
-        "packagesPath": "C:\\Users\\luans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\IALendoPDF\\obj\\",
+        "projectPath": "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj",
+        "packagesPath": "C:\\Users\\Luan\\.nuget\\packages\\",
+        "outputPath": "D:\\projetos\\IALendoPDF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luans\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Luan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

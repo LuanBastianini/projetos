@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using OpenAI;
 using OpenAI.Responses;
 using System.Text.Json;
+using System.Numerics;
+using IALendoPDF;
 
 var httpClient = new HttpClient
 {
@@ -14,10 +16,22 @@ var httpClient = new HttpClient
 };
 httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User)}");
 
+var input = Console.ReadLine();
+var tools = new List<Tools>
+{
+    new() {
+        type = "file_search",
+        vector_store_ids = new []{"vs_69a76273f7a88191a0cf25fd32edf0e0"},
+        max_num_results = 20
+    }
+};
+
 var body = new    
 {
     model = "gpt-5-nano",
-    input = "Olá, tudo bem?"
+    instructions = File.ReadAllText("ArquivoLeitura/Prompt.txt"),
+    tools,
+    input
 };
 
 var response = await httpClient.PostAsync("responses", new StringContent(JsonSerializer.Serialize(body), Encoding.UTF8, "application/json"));
@@ -27,8 +41,6 @@ Console.WriteLine(responseContent);
 // var prompt = File.ReadAllText("ArquivoLeitura/Prompt.txt").Replace("@TEXTO", text).Replace("@PERGUNTA", "quem é a analista do escopo?");
 
 // var pdfFile = "ArquivoLeitura/Escopo.pdf";
-
-
 
 // var response = await client.Responses.CreateAsync(new ResponseCreateRequest
 // {
