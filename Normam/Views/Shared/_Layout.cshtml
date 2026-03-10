@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Normam</title>
+    <link rel="shortcut icon" type="image/png" href="~/image/Normam.png"/>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/ui/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="uk-card">
+        <div class="uk-card-header">
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">Normam</h3>
+            </div>
+        </div>
+    </header>
+    <div class="uk-container body">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="uk-card footer">
+        <div class="uk-card-footer">
+            <p>&copy; 2026 - Chat Normam</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/ui/dist/js/uikit.min.js"></script>
+    <script src="~/lib/ui/dist/js/jquery.serializeObject.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+header{
+  border-bottom: #00000033 1px solid;
+}
+
+.body {
+  width: 30%;
+  margin: 20px auto;
+  border: #00000033 1px solid;
+}
+
+.footer{
+  position: fixed !important;
+  bottom: 0;
+  border-top: #00000033 1px solid;
+  width: 100%;
+}
+
+.border{
+  border: #00000033 1px solid;
+}
+
+.border-bottom{
+  border-bottom: #00000033 1px solid;
+}
+
+.chat{
+  height: 45vh;
+}
