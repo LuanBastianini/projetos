@@ -8,6 +8,9 @@ using OpenAI.Responses;
 using System.Text.Json;
 using System.Numerics;
 using IALendoPDF;
+using System.Security.Cryptography.X509Certificates;
+
+Console.OutputEncoding = Encoding.UTF8;
 
 var httpClient = new HttpClient
 {
@@ -36,7 +39,24 @@ var body = new
 
 var response = await httpClient.PostAsync("responses", new StringContent(JsonSerializer.Serialize(body), Encoding.UTF8, "application/json"));
 var responseContent = await response.Content.ReadAsStringAsync();
-Console.WriteLine(responseContent);
+var model = JsonSerializer.Deserialize<ResponseDto>(responseContent);
+OutputDto output = new OutputDto();
+ContentDto content = new ContentDto();
+
+if(model != null)
+    output = model.output.FirstOrDefault(x => x.type == "message");
+else
+    Console.WriteLine("Resposta Vazia");
+
+if(output != null)
+    content = output.content.FirstOrDefault(x => x.type == "output_text");
+else
+    Console.WriteLine("Saida Vazia");
+
+if(content != null)
+    Console.WriteLine(content.text);
+else
+    Console.WriteLine("Conteudo vazio");
 
 // var prompt = File.ReadAllText("ArquivoLeitura/Prompt.txt").Replace("@TEXTO", text).Replace("@PERGUNTA", "quem é a analista do escopo?");
 

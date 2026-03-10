@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj": {}
+    "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\projetos\\IALendoPDF\\IALendoPDF.csproj": {}
   },
   "projects": {
-    "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj": {
+    "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\projetos\\IALendoPDF\\IALendoPDF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj",
+        "projectUniqueName": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\projetos\\IALendoPDF\\IALendoPDF.csproj",
         "projectName": "IALendoPDF",
-        "projectPath": "D:\\projetos\\IALendoPDF\\IALendoPDF.csproj",
-        "packagesPath": "C:\\Users\\Luan\\.nuget\\packages\\",
-        "outputPath": "D:\\projetos\\IALendoPDF\\obj\\",
+        "projectPath": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\projetos\\IALendoPDF\\IALendoPDF.csproj",
+        "packagesPath": "C:\\Users\\luans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luans\\OneDrive\\Documentos\\EstudoIA\\projetos\\IALendoPDF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\luans\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -32,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -67,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
