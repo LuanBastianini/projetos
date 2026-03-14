@@ -14,16 +14,27 @@
     </div>
 </div>
 
-<div class="uk-margin-medium-top chat">
+<div class="uk-margin-medium-top chat" id="divChat">
     <ul class="uk-list" id="chatList">
-        <li>Olá sou o Chat Normam, em que posso ajudar ?</li>
-        @* <li class="uk-text-right">Olá.</li> *@
+        <li style="float: left; width: 90%;">
+            <div class="balao-fala resposta">Olá sou o Chat Normam, em que posso ajudar ?</div>
+        </li>
     </ul>
 </div>
 
+<div id="loading" class="balao-fala resposta loading" style="display: none;"><span>.</span><span>.</span><span>.</span></div>
+
 <hr class="uk-divider-icon">
 
-<form class="uk-margin-small" id="formChat">
+<form class="uk-margin-small" id="formChat" onsubmit="site.get(); return false;">
     <input id="inputChat" name="inputChat" class="uk-input" type="text" placeholder="Qual sua duvida?" style="width: 80%;">
-    <button type="button" id="btnChat" class="uk-button uk-button-default">ENVIAR</button>
+    <button type="submit" id="btnChat" class="uk-button uk-button-default">ENVIAR</button>
 </form>
+
+<script>
+    site.init({
+        url: {
+            chat: '@Url.Action("GetChat", "Normam")'
+        }
+    });
+</script>

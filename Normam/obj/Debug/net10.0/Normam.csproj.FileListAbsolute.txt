@@ -58,7 +58,8 @@ C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\co
 C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\5y050wlpyr-{0}-gslxn097zu-gslxn097zu.gz
 C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\i93wyy5cf5-{0}-xnoukearud-xnoukearud.gz
 C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\54pnq4qt2z-{0}-3z1y4nml9u-3z1y4nml9u.gz
-C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\pzw7co52jj-{0}-0bql7wrzdu-0bql7wrzdu.gz
-C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\pd8d28xw7n-{0}-ju7f5fdkyu-ju7f5fdkyu.gz
 C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\wvasu92etm-{0}-53kkcbdm81-53kkcbdm81.gz
 C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\xhnhh84hpc-{0}-o3wzzfcea2-o3wzzfcea2.gz
+C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\pzw7co52jj-{0}-8fzpvioq42-8fzpvioq42.gz
+C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\pd8d28xw7n-{0}-q24foxj4v6-q24foxj4v6.gz
+C:\Users\luans\OneDrive\Documentos\EstudoIA\projetos\Normam\obj\Debug\net10.0\compressed\7z707put1j-{0}-hzv6gveb8c-hzv6gveb8c.gz

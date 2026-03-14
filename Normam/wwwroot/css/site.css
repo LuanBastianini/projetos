@@ -40,4 +40,64 @@ header{
 
 .chat{
   height: 45vh;
+  overflow-y: auto;
+}
+
+.loading{
+  padding: 10px !important;
+  display: inline;
+}
+
+.loading span {
+  animation: blink 1.4s infinite both;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.balao-fala {
+  position: relative;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: justify;
+  margin: 0 20px;
+}
+
+.pergunta{
+  background: #00aabb;
+}
+
+.pergunta::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #00000000 #00000000 #00000000 #00aabbfc;
+}
+
+.resposta{
+  background: #666;
+}
+
+.resposta::after {
+  content: "";
+  position: absolute;
+  left: -29px;
+  border-width: 0 15px 15px;
+  border-style: solid;
+  border-color: #00000000 #666 #00000000 #00000000;
+  top: 10px;
 }

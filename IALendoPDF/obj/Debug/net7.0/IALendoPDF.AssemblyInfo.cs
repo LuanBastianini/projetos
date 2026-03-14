@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IALendoPDF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60ed304fd1448ee1772c0fd8903954942dc6ee54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44380673c6a94679629dedda4476a91bd2cf4267")]
 [assembly: System.Reflection.AssemblyProductAttribute("IALendoPDF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IALendoPDF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
